@@ -1,0 +1,424 @@
+/* Basic Reset and Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Dark background color */
+    color: #000; /* Light text color */
+    margin: 0;
+    /* --- CHANGES FOR CENTERING AND SIZE START HERE --- */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure it takes up the full viewport height */
+    /* --- CHANGES FOR CENTERING AND SIZE END HERE --- */
+    flex-direction: column; 
+}
+
+/* Styles for Login Screen 1 (index.html) */
+.auth-container {
+    /* Using a fixed, centered container for desktop display */
+    width: 100%;
+    max-width: 450px; /* A focused width for the login form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: auto; /* Allow height to collapse to content size */
+    box-sizing: border-box;
+}
+
+
+/* Login Box / Main Content */
+.login-box {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Width of the form elements inside the container */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.create-account-form p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Input Field Styling */
+input[type="email"] {
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000; 
+    border-radius: 6px;
+    background-color: #E0E0E0; 
+    color: #000;
+    box-sizing: border-box; 
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dost-signup-btn {
+    background-color: #000; 
+    color: white;
+    transition: opacity 0.4s ease-out;
+    opacity: 1; 
+}
+
+/* Fade out effect */
+.dost-signup-btn.fade-out {
+    opacity: 0.2; 
+    pointer-events: none;
+}
+
+.google-signup-btn {
+    background-color: #E0E0E0; 
+    color: #000;
+    border: 1px solid #000;
+}
+
+.google-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Separator Style */
+.separator {
+    margin: 20px 0;
+    font-size: 0.8em;
+    color: #8b949e; 
+}
+
+/* Terms and Policy */
+.terms-policy {
+    font-size: 0.8em;
+    color: #8b949e;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.terms-policy a {
+    color: #58a6ff; 
+    text-decoration: none;
+}
+
+.terms-policy a:hover {
+    text-decoration: underline;
+}
+
+/* Logo Icons Container for index.html */
+.logo-icons-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px 0; 
+    width: 100%; 
+}
+
+.logo-row {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; 
+    width: 100%;
+}
+
+.logo-icons-container img { 
+    height: 40px; 
+    width: auto; 
+    max-width: 45%; 
+    padding: 0 5px; 
+    object-fit: contain; 
+}
+
+
+/* -------------------------------------------------------------------------------- */
+/* --- Styles for Login Screen 2 (dashboard.html - Google Choose Account) --- */
+/* -------------------------------------------------------------------------------- */
+
+.google-auth-container {
+    /* Ensure this page also respects the desktop view constraint */
+    max-width: 450px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #fff; 
+    min-height: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-top: 50px; 
+}
+
+/* Card Container */
+.google-card {
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(60, 64, 67, 0.3); 
+    margin-bottom: 24px;
+    box-sizing: border-box;
+}
+
+/* Header (Sign in with Google) */
+.google-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.google-header span {
+    font-size: 1.15rem;
+    color: #202124;
+}
+
+/* Card Content */
+.card-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin: 0;
+}
+
+.card-content .to-continue {
+    font-size: 1rem;
+    color: #5f6368;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.card-content .app-name {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Account List */
+.account-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.account-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: background-color 0.2s;
+}
+
+.account-item:hover {
+    background-color: #f8f8f8;
+}
+
+/* Account Avatar/Icon */
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #512da8; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 16px;
+}
+
+/* Use another account icon */
+.account-item.use-another-account .icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #dadce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.account-item.use-another-account .user-icon {
+    width: 20px;
+    height: 20px;
+}
+.account-item.use-another-account .account-name-text {
+    color: #1a73e8; 
+    font-weight: 500;
+}
+
+/* Account Details */
+.account-details {
+    text-align: left;
+}
+
+.account-name-text {
+    font-weight: 500;
+    color: #202124;
+}
+
+.account-email {
+    font-size: 0.85rem;
+    color: #5f6368;
+}
+
+/* Privacy Notice */
+.privacy-notice {
+    font-size: 0.8rem;
+    color: #5f6368;
+    line-height: 1.4;
+    margin-top: 24px;
+}
+
+.privacy-notice a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+/* Footer (Help, Privacy, Terms) */
+.google-footer {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 24px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #5f6368;
+}
+
+.google-footer .footer-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.google-footer a {
+    color: #5f6368;
+    text-decoration: none;
+    padding: 0 4px;
+}
+
+.google-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Language Selector styling */
+.language-selector {
+    padding-right: 10px;
+    cursor: pointer;
+    color: #5f6368;
+    position: relative;
+}
+
+/* Logos at the bottom of the Google screen */
+.google-auth-logos-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 50px; 
+}
+
+.google-auth-logos-bottom img {
+    height: 40px; 
+    width: auto;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+
+/* ... (your existing styles.css code above) ... */
+
+/* -------------------------------------------------------------------------------- */
+/* --- Styles for Login Screen 3 (login-screen-3.html) --- */
+/* -------------------------------------------------------------------------------- */
+
+/* Specific body style for login-screen-3 to apply the light background */
+body.login3-body-style {
+    background-color: #ffffff; 
+    box-sizing: border-box; 
+}
+
+.login3-container {
+    font-family: 'Roboto', Arial, sans-serif;
+    /* Background is handled by body.login3-body-style now */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center content vertically in the viewport */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; 
+}
+
+.login3-card {
+    background-color: #ffffff; /* White card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    padding: 40px; /* Increased padding */
+    width: 100%;
+    max-width: 450px; /* <-- INCREASED MAX-WIDTH HERE (was 400px) */
+    text-align: center;
+    margin-bottom: 50px; /* Space between card and bottom logos */
+    box-sizing: border-box;
+}
+
+.login3-input {
+    width: 100%; /* Full width of its container */
+    padding: 12px; /* Uniform padding */
+    margin-bottom: 20px;
+    border: 1px solid #dadce0;
+    border-radius: 4px; /* Slightly smaller border-radius for input */
+    font-size: 1rem;
+    color: #3c4043;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login3-input::placeholder {
+    color: #7f878b;
+}
+
+.login3-remember-me {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align checkbox to the left */
+    width: 100%;
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 0.95rem; /* Slightly larger font */
+    color: #5f6368;
+}
+
+.login3-remember-me input[type="checkbox"] {
+    margin-right: 12px; 
+/* ... (rest of the CSS for this section) */

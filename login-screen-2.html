@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Choose an account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="google-auth-container">
+        
+        <div class="google-card">
+            <header class="google-header">
+                <span>Sign in with Google</span>
+            </header>
+
+            <div class="card-content">
+                <h2>Choose an account</h2>
+                <p class="to-continue">to continue to <a href="#" class="app-name">AGHAMazing Quest CMS</a></p>
+
+                <ul class="account-list">
+                    <li class="account-item" onclick="selectAccount('account1@gmail.com')">
+                        <div class="avatar-circle">A</div>
+                        <div class="account-details">
+                            <div class="account-name-text">Account Name</div>
+                            <div class="account-email">email@gmail.com</div>
+                        </div>
+                    </li>
+                    <li class="account-item" onclick="selectAccount('account2@gmail.com')">
+                        <div class="avatar-circle">A</div>
+                        <div class="account-details">
+                            <div class="account-name-text">Account Name</div>
+                            <div class="account-email">email@gmail.com</div>
+                        </div>
+                    </li>
+                    <li class="account-item use-another-account" onclick="useAnotherAccount()">
+                        <div class="icon-circle">
+                            <img src="https://github.com/Marianne-101/pictures/blob/main/user-icon.png?raw=true.png" alt="User icon" class="user-icon">
+                        </div>
+                        <div class="account-details">
+                            <div class="account-name-text">Use another account</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <p class="privacy-notice">
+                    To continue, Google will share your name, email address, language preference,
+                    and profile picture with Company. Before using this app, you can review
+                    Company's
+                    <a href="#">privacy policy</a> and <a href="#">terms of service</a>.
+                </p>
+            </div>
+        </div>
+
+        <footer class="google-footer">
+            <div class="footer-links">
+                <span class="language-selector">English (United States)</span>
+                <span class="spacer"></span>
+                <a href="#">Help</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="google-auth-logos-bottom">
+        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-logo.png?raw=true.png" alt="DOST-STII Logo">
+        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-library-logo.png?raw=true.png" alt="DOST-STII Library Logo">
+        <img src="https://github.com/Marianne-101/pictures/blob/main/nu-logo.png?raw=true.png" alt="NU Logo">
+        <img src="https://github.com/Marianne-101/pictures/blob/main/asia-pacific-college-logo.jpg?raw=true.png" alt="Asia Pacific College Logo">
+    </div>
+
+    <script>
+        // Simple placeholder functions for demonstration
+        function selectAccount(email) {
+            console.log('Selected account:', email);
+            alert('Simulating sign-in with ' + email + '. This would typically lead to a dashboard.');
+        }
+
+        // 🔑 THIS FUNCTION IS UPDATED TO REDIRECT TO LOGIN-SCREEN-3.HTML
+        function useAnotherAccount() {
+            console.log('Redirecting to login-screen-3.html.');
+            window.location.href = 'login-screen-3.html'; 
+        }
+    </script>
+</body>
+</html>

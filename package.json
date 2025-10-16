@@ -1,0 +1,15 @@
+{
+  "name": "apc_2025_2026_t1_mi232_g04-dost-aghamazing-quest-cms",
+  "version": "1.0.0",
+  "description": "Template repository for APC MSSYADD1",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
