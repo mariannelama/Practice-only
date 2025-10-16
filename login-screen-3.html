@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="login3-body-style"> <div class="login3-container">
+<body class="login3-body-style"> 
+    <div class="login3-container">
         <div class="login3-card">
             <input type="email" id="login3-email" placeholder="email@gmail.com" value="email@gmail.com" class="login3-input">
 
@@ -27,40 +28,12 @@
         </div>
 
         <div class="google-auth-logos-bottom">
-        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-logo.png?raw=true.png" alt="DOST-STII Logo">
-        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-library-logo.png?raw=true.png" alt="DOST-STII Library Logo">
-        <img src="https://github.com/Marianne-101/pictures/blob/main/nu-logo.png?raw=true.png" alt="NU Logo">
-        <img src="https://github.com/Marianne-101/pictures/blob/main/asia-pacific-college-logo.jpg?raw=true.png" alt="Asia Pacific College Logo">
+            <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-logo.png?raw=true.png" alt="DOST-STII Logo">
+            <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-library-logo.png?raw=true.png" alt="DOST-STII Library Logo">
+            <img src="https://github.com/Marianne-101/pictures/blob/main/nu-logo.png?raw=true.png" alt="NU Logo">
+            <img src="https://github.com/Marianne-101/pictures/blob/main/asia-pacific-college-logo.jpg?raw=true.png" alt="Asia Pacific College Logo">
+        </div>
     </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const continueButton = document.querySelector('.login3-continue-btn');
-            const googleButton = document.querySelector('.login3-google-btn-alt'); // Updated selector
-            const emailInput = document.getElementById('login3-email');
-            const rememberMeCheckbox = document.getElementById('remember-me');
-
-            if (continueButton) {
-                continueButton.addEventListener('click', function() {
-                    const email = emailInput.value.trim();
-                    const remember = rememberMeCheckbox.checked;
-                    console.log('Continue clicked. Email:', email, 'Remember Me:', remember);
-                    // Using custom message box instead of alert()
-                    const message = `Simulating login for ${email}. Remember Me: ${remember}.`;
-                    console.log(message);
-                    // In a real app, you'd send this to your backend for authentication
-                });
-            }
-
-            if (googleButton) {
-                googleButton.addEventListener('click', function() {
-                    console.log('Google login clicked on Login Screen 3. Redirecting to Login Screen 2 (dashboard.html).');
-                    // 🔑 UPDATED: Redirect to Login Screen 2 (dashboard.html)
-                    window.location.href = 'login-screen-2.html'; 
-                });
-            }
-        });
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
