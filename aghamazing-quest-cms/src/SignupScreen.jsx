@@ -38,28 +38,27 @@ const SignupScreen = () => {
         navigate('/google-auth'); 
     };
 
-    return (
-        <div className="auth-container">
-            <header className="app-header" />
-
-            <main className="login-box">
-                <h1>AGHAMazing Quest CMS</h1>
-
-                <div className="logo-icons-container">
-                    <div className="logo-row top-row">
-                        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-logo.png?raw=true.png" alt="DOST STII Logo" />
-                        <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-library-logo.png?raw=true.png" alt="DOST STII Library Logo" />
-                    </div>
-                    <div className="logo-row bottom-row">
-                        <img src="https://github.com/Marianne-101/pictures/blob/main/nu-logo.png?raw=true.png" alt="NU Logo" />
-                        <img src="https://github.com/Marianne-101/pictures/blob/main/asia-pacific-college-logo.jpg?raw=true.png" alt="Asia Pacific College Logo" />
-                    </div>
+return (
+<div className="auth-container">
+    <header className="app-header" />
+    
+    <main className="login-box">
+        <h1>AGHAMazing Quest CMS</h1>
+        
+        <div className="logo-icons-container">
+        <div className="logo-row top-row">
+            <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-logo.png?raw=true.png" alt="DOST STII Logo" />
+            <img src="https://github.com/Marianne-101/pictures/blob/main/dost-stii-library-logo.png?raw=true.png" alt="DOST STII Library Logo" />
+            </div>
+            <div className="logo-row bottom-row">
+                <img src="https://github.com/Marianne-101/pictures/blob/main/nu-logo.png?raw=true.png" alt="NU Logo" />
+                <img src="https://github.com/Marianne-101/pictures/blob/main/asia-pacific-college-logo.jpg?raw=true.png" alt="Asia Pacific College Logo" />
                 </div>
-
+                </div>
+                
                 <section className="create-account-form">
                     <h2>Create an account</h2>
                     <p>Enter your email to sign up for this app</p>
-                    
                     {/* Controlled Input */}
                     <input 
                         type="email" 

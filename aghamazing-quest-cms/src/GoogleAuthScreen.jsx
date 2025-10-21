@@ -3,25 +3,25 @@ import { useNavigate } from 'react-router-dom';
 import LogosContainer from './LogosContainer'; 
 
 const GoogleAuthScreen = () => {
-    const navigate = useNavigate();
+const navigate = useNavigate();
 
-    // Replaces the inline JS selectAccount function
+// Replaces the inline JS selectAccount function
     const selectAccount = (email) => {
-        console.log('Selected account:', email);
-        alert('Simulating sign-in with ' + email + '. This would typically lead to a dashboard.');
+    console.log('Selected account:', email);
+    alert('Simulating sign-in with ' + email + '. This would typically lead to a dashboard.');
     };
 
-    // Replaces the inline JS useAnotherAccount function
+// Replaces the inline JS useAnotherAccount function
     const useAnotherAccount = () => {
         console.log('Redirecting to login-screen-3.html.');
-        // 🔑 Use navigate to /signin (login-screen-3)
+// 🔑 Use navigate to /signin (login-screen-3)
         navigate('/signin'); 
     };
     
-    // Static data for the accounts list
+// Static data for the accounts list
     const accounts = [
-        { initial: 'A', name: 'Account Name', email: 'email@gmail.com' },
-        { initial: 'B', name: 'Another Account', email: 'another.email@gmail.com' },
+    { initial: 'A', name: 'Account Name', email: 'email@gmail.com' },
+    { initial: 'B', name: 'Another Account', email: 'another.email@gmail.com' },
     ];
 
     return (
