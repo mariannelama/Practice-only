@@ -37,7 +37,11 @@ const App = () => {
     return (
         // Global container using Tailwind to ensure full viewport coverage
         <div className="min-h-screen flex items-center justify-center bg-gray-50 font-sans">
-            {content}
+            {/* Added a key to force re-render when currentPage changes */}
+            <div key={currentPage} className="w-full h-full flex items-center justify-center">
+                {content}
+            </div>
+            
             <MessageModal 
                 title={modal.title} 
                 message={modal.message} 

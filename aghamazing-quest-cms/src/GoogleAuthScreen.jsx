@@ -3,7 +3,6 @@ const GoogleAuthScreen = ({ navigate, showMessage }) => {
 
     const selectAccount = (email) => {
         showMessage('Sign-in Successful', `Simulating sign-in with ${email}. Redirecting to Dashboard.`);
-        // navigate('/dashboard'); 
     };
 
     const useAnotherAccount = () => {
@@ -11,7 +10,7 @@ const GoogleAuthScreen = ({ navigate, showMessage }) => {
     };
 
     return (
-        <div className="google-auth-container flex flex-col items-center w-full min-h-screen pt-12 md:pt-20 bg-gray-50">
+        <div className="google-auth-container flex flex-col items-center w-full min-h-screen pt-12 md:pt-20 bg-gray-50 relative z-10">
             <div className="google-card w-full max-w-sm md:max-w-md border border-gray-200 rounded-xl p-6 shadow-xl bg-white">
                 <header className="mb-6">
                     <span className="text-xl font-medium text-gray-800">Sign in with Google</span>
@@ -64,4 +63,4 @@ const GoogleAuthScreen = ({ navigate, showMessage }) => {
             </button>
         </div>
     );
-};
+};1

@@ -16,7 +16,7 @@ const SignInScreen = ({ navigate, showMessage }) => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-50 p-4 box-border">
+        <div className="flex flex-col items-center justify-center w-full min-h-screen bg-gray-50 p-4 box-border relative z-10">
             <div className="login3-card bg-white rounded-xl shadow-2xl p-8 w-full max-w-sm md:max-w-md text-center mb-6">
                 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Sign In</h2>
@@ -45,7 +45,7 @@ const SignInScreen = ({ navigate, showMessage }) => {
 
                 <button 
                     onClick={handleContinue}
-                    className="w-full p-3 mb-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-150 shadow-md"
+                    className="w-full p-3 mb-4 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-150 shadow-md cursor-pointer"
                 >
                     Continue
                 </button>
@@ -58,7 +58,7 @@ const SignInScreen = ({ navigate, showMessage }) => {
 
                 <button 
                     onClick={handleGoogleLogin}
-                    className="w-full p-3 border border-gray-300 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 flex items-center justify-center transition duration-150 shadow-sm" 
+                    className="w-full p-3 border border-gray-300 bg-white text-gray-900 font-bold rounded-lg hover:bg-gray-100 flex items-center justify-center transition duration-150 shadow-sm cursor-pointer" 
                 > 
                     <img src={GOOGLE_ICON} onError={(e) => e.target.src=GOOGLE_ICON} alt="Google Icon" className="w-5 h-5 mr-3" />
                     Sign in with Google

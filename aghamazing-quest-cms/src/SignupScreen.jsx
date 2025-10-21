@@ -11,42 +11,34 @@ const SignupScreen = ({ navigate, showMessage }) => {
         const trimmedEmail = email.trim();
 
         if (trimmedEmail === '') {
-            // Replaced alert() with showMessage
             showMessage('Validation Error', 'Please enter your email address to sign up.');
             return;
         }
 
         if (trimmedEmail.endsWith('@dost.gov.ph')) {
             console.log('Initiating DOST sign-up for:', trimmedEmail);
-            // Replaced alert() with showMessage
             showMessage('DOST Verification', `Redirecting for DOST verification for email: ${trimmedEmail}`);
-            
-            // Trigger the fade-out effect 
             setIsDostFading(true); 
-
-            // In a real app, you might navigate or call an API here.
             
         } else {
             console.log('Redirecting to sign-in screen.');
-            // 🔑 This is the clickable navigation logic
             navigate('/signin'); 
         }
     };
     
     const handleGoogleSignup = () => {
         console.log('Initiating Google sign-up/login flow. Redirecting to Google Auth Screen.');
-        // 🔑 This is the clickable navigation logic
         navigate('/google-auth'); 
     };
 
     return (
-        <div className="auth-container p-6 mx-auto max-w-sm md:max-w-md w-full">
+        <div className="auth-container p-6 mx-auto max-w-sm md:max-w-md w-full relative z-10">
             <header className="app-header" />
             
-            <main className="login-box text-center bg-white rounded-xl shadow-lg p-6">
+            <main className="login-box text-center bg-white rounded-xl shadow-lg p-8">
                 <h1 className="text-2xl font-semibold mb-8 text-gray-900">AGHAMazing Quest CMS</h1>
                 
-                {/* Logo Icons Container (Styled with Tailwind) */}
+                {/* Logo Icons Container */}
                 <div className="flex flex-col items-center my-5 w-full">
                     <div className="flex justify-center items-center mb-2 w-full space-x-2">
                         <img src={DOST_STII_LOGO} onError={(e) => e.target.src=DOST_STII_LOGO} alt="DOST STII Logo" className="h-10 w-auto max-w-[45%] object-contain rounded-md" />
@@ -62,34 +54,33 @@ const SignupScreen = ({ navigate, showMessage }) => {
                     <h2 className="text-xl font-medium mb-1 text-gray-900">Create an account</h2>
                     <p className="text-sm text-gray-600 mb-4">Enter your email to sign up for this app</p>
                     
-                    {/* Controlled Input (Styled with Tailwind) */}
+                    {/* Controlled Input */}
                     <input 
                         type="email" 
                         id="email" 
                         placeholder="email@domain.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        onFocus={() => console.log('Email input field is focused.')}
                         className="w-full p-3 mb-4 border border-gray-300 rounded-lg bg-gray-100 text-gray-900 outline-none focus:ring-2 focus:ring-blue-500 box-border"
                     />
                     
                     <p className="text-sm text-gray-600 mb-6 flex justify-start">
                         Already have an account? 
-                        {/* 🔑 Sign In Link - Uses navigate prop */}
+                        {/* Link for Sign In: now has explicit cursor-pointer */}
                         <a 
                             href="/signin" 
                             onClick={(e) => { e.preventDefault(); navigate('/signin'); }} 
-                            className="sign-in-link ml-1 text-blue-600 hover:underline font-semibold cursor-pointer"
+                            className="sign-in-link ml-1 text-blue-600 hover:underline font-semibold cursor-pointer z-20"
                         >
                             Sign In
                         </a> 
                     </p>
 
                     <button 
-                        className={`w-full p-3 rounded-lg font-bold transition duration-300 
+                        className={`w-full p-3 rounded-lg font-bold transition duration-300 z-20 
                             ${isDostFading 
                                 ? 'opacity-50 bg-gray-400 cursor-not-allowed' 
-                                : 'bg-blue-600 text-white hover:bg-blue-700'}`}
+                                : 'bg-blue-600 text-white hover:bg-blue-700 cursor-pointer'}`}
                         onClick={handleDostSignup}
                         disabled={isDostFading}
                     >
@@ -99,9 +90,9 @@ const SignupScreen = ({ navigate, showMessage }) => {
 
                 <div className="my-5 text-sm text-gray-500">or continue with</div>
 
-                {/* 🔑 Google Button - Uses handleGoogleSignup (which calls navigate) */}
+                {/* Button for Google Sign Up: now has explicit cursor-pointer */}
                 <button 
-                    className="google-signup-btn w-full p-3 rounded-lg font-bold border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 flex items-center justify-center transition duration-150" 
+                    className="google-signup-btn w-full p-3 rounded-lg font-bold border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 flex items-center justify-center transition duration-150 cursor-pointer z-20" 
                     onClick={handleGoogleSignup}
                 >
                     <img src={GOOGLE_ICON} onError={(e) => e.target.src=GOOGLE_ICON} alt="Google Icon" className="w-5 h-5 mr-2" /> Google
