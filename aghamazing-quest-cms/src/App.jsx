@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignupScreen from './SignupScreen';
 import GoogleAuthScreen from './GoogleAuthScreen';
 import SignInScreen from './SignInScreen';
+import './styles.css';
 // The styles.css import is typically in index.js, but keeping it here as a backup is fine too.
 // import './styles.css'; 
 
