@@ -14,7 +14,7 @@ const App = () => {
     };
 
     const handleModalConfirm = () => {
-        setModal({ title: '', message: '' });
+        setModal({ title, message: '' });
     };
 
     let content;
@@ -36,7 +36,7 @@ const App = () => {
 
     return (
         // Global container using Tailwind to ensure full viewport coverage
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 font-sans">
+        <div className="w-full h-screen flex items-center justify-center bg-gray-50 font-sans">
             {/* Added a key to force re-render when currentPage changes */}
             <div key={currentPage} className="w-full h-full flex items-center justify-center">
                 {content}
