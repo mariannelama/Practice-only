@@ -1,27 +1,50 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SignupScreen from './SignupScreen.jsx';
-import GoogleAuthScreen from './GoogleAuthScreen.jsx';
-import SignInScreen from './SignInScreen.jsx';
-import './styles.css';
-// The styles.css import is typically in index.js, but keeping it here as a backup is fine too.
-// import './styles.css'; 
+const App = () => {
+    // State to simulate routing: '/' (Signup), '/signin' (SignIn), '/google-auth' (GoogleAuth)
+    const [currentPage, setCurrentPage] = useState('/'); 
+    const [modal, setModal] = useState({ title: '', message: '' });
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        {/* Sign Up Screen (index.html equivalent) */}
-        <Route path="/" element={<SignupScreen />} />
-        
-        {/* Google Auth Screen (login-screen-2.html equivalent) */}
-        <Route path="/google-auth" element={<GoogleAuthScreen />} />
-        
-        {/* Sign In Screen (login-screen-3.html equivalent) */}
-        <Route path="/signin" element={<SignInScreen />} />
-      </Routes>
-    </Router>
-  );
-}
+    // Custom navigate function
+    const navigate = useCallback((path) => {
+        setCurrentPage(path);
+    }, []);
+
+    // Custom showMessage function to replace alert()
+    const showMessage = (title, message) => {
+        setModal({ title, message });
+    };
+
+    const handleModalConfirm = () => {
+        setModal({ title: '', message: '' });
+    };
+
+    let content;
+    const props = { navigate, showMessage };
+
+    switch (currentPage) {
+        case '/google-auth':
+            content = <GoogleAuthScreen {...props} />;
+            break;
+        case '/signin':
+            content = <SignInScreen {...props} />;
+            break;
+        case '/':
+        default:
+            // This is the component that uses the original SignupScreen logic
+            content = <SignupScreen {...props} />;
+            break;
+    }
+
+    return (
+        // Global container using Tailwind to ensure full viewport coverage
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 font-sans">
+            {content}
+            <MessageModal 
+                title={modal.title} 
+                message={modal.message} 
+                onConfirm={handleModalConfirm} 
+            />
+        </div>
+    );
+};
 
 export default App;
